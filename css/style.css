@@ -44,7 +44,17 @@
     /* height: 100vh; */
 
 }
-.main__contant{
+
+.sidebar_button{
+    padding: 10px;
+    font-weight: bolder;
+}
+
+.sidebar_button :hover{
+    background: black;
+}
+
+.main__contant {
     padding: 20px;
     overflow-y: auto;
     width: 100%;
@@ -52,7 +62,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     
 
 }
@@ -90,8 +100,4 @@
 
 .button-to-bin:hover{
     background-color: rgba(57, 168, 47, 0.692);
-}
-
-.footer{
-
 }
