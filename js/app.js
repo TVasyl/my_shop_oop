@@ -1,13 +1,24 @@
 let cards = new Card();
+let mainContent = document.querySelector('.main__contant');
 
-window.target
+const homeButton = document.querySelector('.home');
+const goodesButton = document.querySelector('.goodes');
 
 
+goodesButton.addEventListener('click', showViev);
+homeButton.addEventListener('click', showHome);
 
+function showViev() {
+    createCards(data);
+}
+
+function showHome() {
+    mainContent.innerHTML = '';
+}
 
 
 function createCards(data) {
-    let mainContent = document.querySelector('.main__contant');
+    
     mainContent.innerHTML = '';
     for(let items in data) {
         cards.setCardName(data[items].name);
@@ -19,6 +30,6 @@ function createCards(data) {
 }
 
 
-createCards(data);
+//createCards(data);
 
 console.log(cards);

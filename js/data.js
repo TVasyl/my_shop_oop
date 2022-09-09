@@ -96,3 +96,20 @@ const data = {
     },
     
 }
+
+
+const advertising = {
+    "add-1": {
+        "title": "You can to add the advertising in this place #1",
+        "image": "/my_shop_oop/images/control-panel-icon.png"
+    },
+    "add-2": {
+        "title": "You can to add the advertising in this place #2",
+        "image": "/my_shop_oop/images/drum-icon.png"
+    },
+    "add-3": {
+        "title": "You can to add the advertising in this place #3",
+        "image": "/my_shop_oop/images/keyboard-piano-icon.png"
+    }
+
+}
