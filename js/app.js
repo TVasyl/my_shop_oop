@@ -1,35 +1,25 @@
 let cards = new Card();
+let home = new Home();
 let mainContent = document.querySelector('.main__contant');
 
 const homeButton = document.querySelector('.home');
 const goodesButton = document.querySelector('.goodes');
 
 
-goodesButton.addEventListener('click', showViev);
+goodesButton.addEventListener('click', createCards);
 homeButton.addEventListener('click', showHome);
 
-function showViev() {
-    createCards(data);
-}
 
 function showHome() {
     mainContent.innerHTML = '';
+    home.render(advertising);
+
 }
 
 
-function createCards(data) {
+function createCards() {
     
     mainContent.innerHTML = '';
-    for(let items in data) {
-        cards.setCardName(data[items].name);
-        cards.setCardImage(data[items].image);
-        cards.setCardPrice(data[items].price);
-        cards.setElement(mainContent);
-        cards.render();
-    }
+    cards.render(data);
 }
 
-
-//createCards(data);
-
-console.log(cards);

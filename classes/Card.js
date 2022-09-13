@@ -1,25 +1,26 @@
 class Card {
+
     constructor() {
         this._classCard = "card";
         this._classButton = "card__button";
+        this. _element = "main__contant";
+        this._attribute;
     }
 
     /**
-     * 
-     * @param {name} name 
      * Method for set name of cards
+     * @param Sring - name 
      */
 
     setCardName(name) {
-        this._name = trim.name; // nedd to check for valide of method 'trim'
+        this._name = name; 
 
         return true;
     }
     
     /**
-     * 
-     * @param {image} image
      * Method for set image of cards
+     * @param String - path to image
      */
     setCardImage(image) {
         this._image = image;
@@ -52,13 +53,17 @@ class Card {
         return true;
     }
 
+    setAttribute(attribute) {
+        this._attribute = attribute;
+    }
+
     //############## Fill the card #####################
 
 
     /**
      * 
      * Method for create name or title some div
-     * @returns div with h2 tag name and class of style from arguments
+     * @returns 'div' with h2 tag name and class of style from arguments
      */
     createName(name, classCss){
         let div = document.createElement('div');
@@ -72,12 +77,12 @@ class Card {
     /**
      * 
      * Metho for create image
-     * @returns div which contaice teg 'img' with src- parametr and style css class from arguments
+     * @returns 'div' which contaice teg 'img' with src- parametr and style css class from arguments
      */
-    createFoto(src, classCss){
+    createImage(src, classCss){
         let div = document.createElement('div');
         div.classList.add(classCss);
-        div.innerHTML = `<img src="${src}" alt="icon" height="100px">`;
+        div.innerHTML = `<img src="${src}" alt="icon" height="100px" >`;
 
         return div;
     }
@@ -86,9 +91,9 @@ class Card {
     /**
      * 
      * Method for create price of goodes
-     * @param price - price of goodes
-     * @param classCss - CSS style class of price 'div'
-     * @returns div with 'h2' tag 'name' + currency and class of style from arguments
+     * @param Number - price of goodes
+     * @param String - CSS style class of price 'div'
+     * @returns 'div' with 'h2' tag 'name' + currency and class of style from arguments
      */
     createPrise(price, classCss){
         let div = document.createElement('div');
@@ -102,8 +107,8 @@ class Card {
     /**
      * 
      * Method for create button
-     * @param {title} title - title of button
-     * @param {buttonStyle} buttonStyle - style css class of button
+     * @param String title - title of button
+     * @param String buttonStyle - style css class of button
      * @returns 'div' which containce 'button' tag with CSS style
      */
     createButton(title, buttonStyle){
@@ -112,6 +117,7 @@ class Card {
         
         let button = document.createElement('button');
         button.classList.add(buttonStyle);
+        button.setAttribute('data-attribute', this._attribute);
         button.innerHTML = title;  
         div.append(button);
 
@@ -120,17 +126,28 @@ class Card {
 
     // ################## Render the cadrds of goodes in the page #############
 
-    render(){
-        //this._element.classList.add('.main__contant .goodes')
-        let div = document.createElement('div');
-        div.classList.add(this._classCard);
-
-        div.append(this.createName(this._name, "goodes-name"));
-        div.append(this.createFoto(this._image, "goodes-foto"));
-        div.append(this.createPrise(this._price, "goodes-price"));
-        div.append(this.createButton('BAY', "button-to-bin"));
+    render(data){
+        for(let items in data) {
+            this.setCardName(data[items].name);
+            this.setCardImage(data[items].image);
+            this.setCardPrice(data[items].price);
+            this.setElement(mainContent);
+            this.setAttribute(items);
 
 
-        this._element.append(div);
+            let div = document.createElement('div');
+            div.classList.add(this._classCard);
+
+            div.append(this.createName(this._name, "goodes-name"));
+            div.append(this.createImage(this._image, "goodes-image"));
+            div.append(this.createPrise(this._price, "goodes-price"));
+            div.append(this.createButton('BAY', "button-to-bin"));
+
+
+            this._element.append(div);
+        }
+
+
+        
     }
 }
