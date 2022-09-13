@@ -61,13 +61,13 @@
 }
 
 .bin-fill {
-    display: inline-block;
+    /* display: inline-block;
     /* padding: 2px; */
-    height: 15px;
+    /* height: 15px;
     width: 15px;
     border-radius: 50%;
-    background-color: red;
-    color: aliceblue;
+    background-color: red;  */
+    color: rgb(248, 4, 4);
 }
 
 .main__contant {

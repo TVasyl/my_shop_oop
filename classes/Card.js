@@ -11,7 +11,6 @@ class Card {
      * Method for set name of cards
      * @param Sring - name 
      */
-
     setCardName(name) {
         this._name = name; 
 
@@ -59,7 +58,6 @@ class Card {
 
     //############## Fill the card #####################
 
-
     /**
      * 
      * Method for create name or title some div
@@ -73,7 +71,6 @@ class Card {
         return div;
     }
 
-
     /**
      * 
      * Metho for create image
@@ -86,7 +83,6 @@ class Card {
 
         return div;
     }
-
 
     /**
      * 
@@ -103,7 +99,6 @@ class Card {
         return div;
     }
 
-
     /**
      * 
      * Method for create button
@@ -117,7 +112,7 @@ class Card {
         
         let button = document.createElement('button');
         button.classList.add(buttonStyle);
-        button.setAttribute('data-attribute', this._attribute);
+        button.setAttribute('data-articul', this._attribute);
         button.innerHTML = title;  
         div.append(button);
 
@@ -125,7 +120,6 @@ class Card {
     }
 
     // ################## Render the cadrds of goodes in the page #############
-
     render(data){
         for(let items in data) {
             this.setCardName(data[items].name);
@@ -134,7 +128,6 @@ class Card {
             this.setElement(mainContent);
             this.setAttribute(items);
 
-
             let div = document.createElement('div');
             div.classList.add(this._classCard);
 
@@ -142,7 +135,6 @@ class Card {
             div.append(this.createImage(this._image, "goodes-image"));
             div.append(this.createPrise(this._price, "goodes-price"));
             div.append(this.createButton('BAY', "button-to-bin"));
-
 
             this._element.append(div);
         }

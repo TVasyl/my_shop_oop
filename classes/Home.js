@@ -1,5 +1,4 @@
-class Home extends Card {
-    
+class Home extends Card {    
     
     render(advertising) {
         for(let items in advertising) {
@@ -7,7 +6,6 @@ class Home extends Card {
             this.setCardImage(advertising[items]["image"]);
             this.setClassOfCard(advertising[items]["style"]);
             this.setElement(mainContent);
-
 
             let div = document.createElement('div');
             div.classList.add(this._classCard);
