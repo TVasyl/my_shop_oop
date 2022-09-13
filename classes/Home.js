@@ -1,4 +1,6 @@
-class Home extends Card{
+class Home extends Card {
+    
+    
     render(advertising) {
         for(let items in advertising) {
             this.setCardName(advertising[items]["title"]);
