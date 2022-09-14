@@ -126,7 +126,7 @@
 
 
 
-.button-to-bin{
+.button-to-bin, .bin__button{
     height: 30px;
     width: 100px;
     border-radius: 3px;
@@ -134,7 +134,83 @@
     background-color: rgba(52, 199, 39, 0.692);
 }
 
-.button-to-bin:hover{
+.button-to-bin, .bin__button:hover{
     background-color: rgba(57, 168, 47, 0.692);
     cursor: pointer;
+}
+
+
+.bin-contant{
+    padding: 10px;
+    border: 2px solid rgba(81, 214, 81, 0.555);
+    border-radius: 5px;
+    width: 100%;
+
+    background-color: rgba(228, 228, 228, 0.575);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.bin__items{
+    padding: 10px;
+    display: flex;
+    /* justify-content: space-between; */
+    border: 1px solid rgba(0, 0, 0, 0.377);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.bin-describe{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px;
+}
+.bin-function{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.bin-count{
+    height: 26px;
+    width: 26px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.operation__button{
+    height: 30px;
+    width: 30px;
+    /* border-radius: 3px; */
+    background-color: rgba(52, 199, 39, 0.692);
+}
+
+.operation__button:hover{
+    background-color: rgba(57, 168, 47, 0.692);
+    cursor: pointer;
+}
+
+
+.bin__total{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid rgba(0, 0, 0, 0.377);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.bin__result{
+    display: flex;
+
+}
+
+.amaunt{
+    padding-right: 20px;
+    font-size: large;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

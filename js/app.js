@@ -63,10 +63,10 @@ mainContent.addEventListener('click', event => {
         localStorage.setItem('cart', JSON.stringify(dataOfBin));
     }   
     
-    bin.setNumberOfGoodes();
+    document.querySelector('.bin-fill').innerHTML = bin.setNumberOfGoodes();
 })
 
 // ################ Create countes of goodes near BIN button ################
-bin.setNumberOfGoodes();
+document.querySelector('.bin-fill').innerHTML = bin.setNumberOfGoodes();
 
 
