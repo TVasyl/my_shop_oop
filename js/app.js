@@ -39,7 +39,7 @@ function showBin() {
     if(localStorage.getItem('cart')){
         const binData = JSON.parse(localStorage.getItem('cart'));
         bin.render(binData);
-    }    
+    } else {bin.render()}; 
     
 }
 
@@ -50,8 +50,6 @@ mainContent.addEventListener('click', event => {
     }
 
     if (event.target.classList.contains('button-to-bin')) {
-        
-
         let articul = event.target.dataset['articul'];
         if (dataOfBin[articul] !== undefined) {
             dataOfBin[articul]['count']++;
@@ -61,12 +59,32 @@ mainContent.addEventListener('click', event => {
             dataOfBin[articul]['count'] = 1;
         }
         localStorage.setItem('cart', JSON.stringify(dataOfBin));
-    }   
-    
+    }    
+    else if (event.target.classList.contains('plus')) {
+        let articul = event.target.dataset['articul'];
+        dataOfBin[articul]['count']++;
+        localStorage.setItem('cart', JSON.stringify(dataOfBin));
+        showBin();
+    }
+    else if (event.target.classList.contains('minus')) {
+        let articul = event.target.dataset['articul'];
+        if (dataOfBin[articul]['count'] > 1){
+            dataOfBin[articul]['count']--;
+            localStorage.setItem('cart', JSON.stringify(dataOfBin));
+            showBin();
+        }
+    }
     document.querySelector('.bin-fill').innerHTML = bin.setNumberOfGoodes();
 })
 
 // ################ Create countes of goodes near BIN button ################
 document.querySelector('.bin-fill').innerHTML = bin.setNumberOfGoodes();
 
-
+mainContent.addEventListener('click', event => {
+    if (event.target.classList.contains('delete')){
+        localStorage.removeItem('cart');
+        dataOfBin = {};
+        document.querySelector('.bin-fill').innerHTML = bin.setNumberOfGoodes();
+        showBin();
+    }
+})

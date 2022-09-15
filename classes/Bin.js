@@ -5,7 +5,7 @@ class Bin {
         this._image;
         this._price;
         this._count;
-        this._attribute;
+        this._articul;
         this.classContant = "bin-contant";
         
     }
@@ -35,8 +35,8 @@ class Bin {
 
         return true;
     }
-    setAttribute(attribute) {
-        this._attribute = attribute;
+    setArticul(articul) {
+        this._articul = articul;
 
         return true;
     }
@@ -76,7 +76,7 @@ class Bin {
         return result;
     }
 
-    createItams() {
+    createItems(articul) {
         let div = document.createElement('div');
         div.classList.add('bin__items');
 
@@ -98,9 +98,9 @@ class Bin {
         divFunction.classList.add("bin-function");
         divFunction.innerHTML = 
         `<div class="amaunt">${this._price} HRN</div>
-        <button class="operation__button minus">-</button>
+        <button class="operation__button minus" data-articul="${articul}">-</button>
         <div class="bin-count">${this._count}</div>
-        <button class="operation__button plus">+</button>`;
+        <button class="operation__button plus" data-articul="${articul}">+</button>`;
         divDescribe.append(divFunction);
 
         div.append(divDescribe);
@@ -125,25 +125,21 @@ class Bin {
     }
 
     render(binData){
+
+        // this._element.innerHTML = '';
         
         let div = document.createElement('div');
         div.classList.add(this.classContant);
-
+        this.setElement(mainContent);
         
-        
-        
-        for (const items in binData) {
-            this.setElement(mainContent);
+        for (const items in binData) {            
             this.setTitle(binData[items].name);
             this.setImage(binData[items].image);
             this.setPrice(binData[items].price);
             this.setCount(binData[items]["count"]);
-            this.setAttribute(items);
+            this.setArticul(items);           
 
-            
-
-            div.append(this.createItams());
-            
+            div.append(this.createItems(items));            
         }
 
         div.append(this.createTotal());

@@ -134,11 +134,15 @@
     background-color: rgba(52, 199, 39, 0.692);
 }
 
-.button-to-bin, .bin__button:hover{
+.button-to-bin:hover{
     background-color: rgba(57, 168, 47, 0.692);
     cursor: pointer;
 }
 
+.bin__button:hover{
+    background-color: rgba(57, 168, 47, 0.692);
+    cursor: pointer;
+}
 
 .bin-contant{
     padding: 10px;
