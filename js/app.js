@@ -6,7 +6,7 @@ let bin = new Bin();
 let dataOfBin = {};
 
 // ################ Initialising main block for different content ################
-let mainContent = document.querySelector('.main__contant');
+const mainContent = document.querySelector('.main__contant');
 
 // ################ Initialising buttons in side bar ################
 const homeButton = document.querySelector('.home');

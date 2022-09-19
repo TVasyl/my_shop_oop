@@ -54,25 +54,22 @@ class Bin {
                 count += binData[item]['count'];
                 
             }
-            this.setCount; //Можливо можна використати setCount
+            this.setCount;
         }
-        
-        this.setCount; //Можливо можна використати setCount
-        
+        this.setCount;
+
         return count;
     }
 
     createAmount(){
         let result = 0;
         if(localStorage.getItem('cart')){
-            
-            
             const binData = JSON.parse(localStorage.getItem('cart'));
             for(let item in binData) {
                 result += binData[item]['count'] * binData[item].price;
             }
-            
         }
+        
         return result;
     }
 
