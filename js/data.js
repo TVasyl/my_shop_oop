@@ -48,52 +48,7 @@ const data = {
         name: "Card 10",
         image: "/images/drum-icon.png",
         price: 1000
-    },
-    "card-11": {
-        name: "Card 10",
-        image: "/images/drum-icon.png",
-        price: 1000
-    },
-    "card-12": {
-        name: "Card 10",
-        image: "/images/drum-icon.png",
-        price: 1000
-    },
-    "card-13": {
-        name: "Card 10",
-        image: "/images/drum-icon.png",
-        price: 1000
-    },
-    "card-14": {
-        name: "Card 10",
-        image: "/images/drum-icon.png",
-        price: 1000
-    },
-    "card-15": {
-        name: "Card 10",
-        image: "/images/drum-icon.png",
-        price: 1000
-    },
-    "card-16": {
-        name: "Card 10",
-        image: "/images/drum-icon.png",
-        price: 1000
-    },
-    "card-17": {
-        name: "Card 10",
-        image: "/images/drum-icon.png",
-        price: 1000
-    },
-    "card-18": {
-        name: "Card 10",
-        image: "/images/drum-icon.png",
-        price: 1000
-    },
-    "card-19": {
-        name: "Card 10",
-        image: "/images/drum-icon.png",
-        price: 1000
-    },
+    }
     
 }
 

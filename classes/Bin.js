@@ -94,7 +94,8 @@ class Bin {
         let divFunction = document.createElement('div');
         divFunction.classList.add("bin-function");
         divFunction.innerHTML = 
-        `<div class="amaunt">${this._price} HRN</div>
+        `<button class="operation__button delete" data-articul="${articul}">X</button>
+        <div class="amaunt">${this._price} HRN</div>
         <button class="operation__button minus" data-articul="${articul}">-</button>
         <div class="bin-count">${this._count}</div>
         <button class="operation__button plus" data-articul="${articul}">+</button>`;
@@ -112,7 +113,7 @@ class Bin {
         let div = document.createElement('div');
         div.classList.add("bin__total");
         div.innerHTML = 
-        `<button class="bin__button delete">Clear</button>
+        `<button class="bin__button clean">Clear</button>
         <div class="bin__result">
             <div class="amaunt">${this.createAmount()} HRN</div>
             <button class="bin__button to-order">To order</button>

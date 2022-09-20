@@ -22,6 +22,7 @@
 
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .contant{
@@ -126,7 +127,7 @@
 
 
 
-.button-to-bin, .bin__button{
+.button-to-bin, .bin__button, .form__button{
     height: 30px;
     width: 100px;
     border-radius: 3px;
@@ -140,6 +141,11 @@
 }
 
 .bin__button:hover{
+    background-color: rgba(57, 168, 47, 0.692);
+    cursor: pointer;
+}
+
+.form__button:hover{
     background-color: rgba(57, 168, 47, 0.692);
     cursor: pointer;
 }
@@ -212,9 +218,54 @@
 
 .amaunt{
     padding-right: 20px;
+    padding-left: 20px;
     font-size: large;
     font-weight: 700;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.form{
+    padding: 10px ;
+    border: 2px solid rgba(81, 214, 81, 0.555);
+    border-radius: 5px;
+    height: 300px;
+    width: 100%;
+    
+    background-color: rgba(228, 228, 228, 0.575);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+
+    
+}
+
+.form-correct{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form__body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form__item,.form__register{
+    margin:10px;
+}
+.form__input{
+    height: 20px;
+    padding: 2px;
+    border-radius: 4px;
+}
+
+.error{
+    border-color: rgba(252, 3, 3, 0.61);
+    box-shadow: 0px 4px 15px rgba(252, 3, 3, 0.952);
+}
+
+.user{
+    cursor: pointer;
 }
