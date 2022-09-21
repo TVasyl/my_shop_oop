@@ -3,6 +3,7 @@ let home = new Home();
 let bin = new Bin();
 let user = new User();
 let registration = new Registration();
+let cabinet = new Cabinet();
 
 // const firstUser = {"email": 'asd@asd.ua', "password": '123456', "name": 'Vasyl', "lastname": 'Trots', "cart":{"card-1":{"name":"Card 1","image":"/images/control-panel-icon.png","price":100,"count":1},"card-2":{"name":"Card 2","image":"/images/drum-icon.png","price":200,"count":1},"card-3":{"name":"Card 3","image":"/images/guitar-icon.png","price":300,"count":1}}};
 
@@ -25,8 +26,8 @@ const loginButton = document.querySelector('.login');
 // ################ Click buttons in in side bar ################
 homeButton.addEventListener('click', showHome);
 goodesButton.addEventListener('click', showCards);
-binButton.addEventListener('click', showBin)
-loginButton.addEventListener('click', showLogin)
+binButton.addEventListener('click', showBin);
+loginButton.addEventListener('click', showLogin);
 
 // ################ Create HOME page firstly ################
 showHome();
@@ -58,6 +59,8 @@ function showLogin(status) {
     mainContent.innerHTML = '';
     if (document.querySelector('.user')) {
         mainContent.innerHTML = '';
+        // console.log(loginButton.dataset.articul);
+        cabinet.render(loginButton.dataset.articul);
     } else {
         user.render(status);
     }

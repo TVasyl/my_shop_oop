@@ -61,6 +61,7 @@ class User {
             if (user['password'] === this._password){
                 loginButton.classList.remove('login');
                 loginButton.classList.add('cabinet');
+                loginButton.setAttribute('data-articul', this._email);
 
                 loginButton.innerHTML = 'CABINET';
                 let div = document.createElement('div');
