@@ -79,7 +79,7 @@ class Bin {
 
         let divImage = document.createElement('div');
         divImage.classList.add("bin__image");
-        divImage.innerHTML = `<img src="${this._image}" alt="icon" height="100px" >`;
+        divImage.innerHTML = `<img src="${this._image}" alt="icon" height="100px"/>`;
         div.append(divImage);
 
         let divDescribe = document.createElement('div');

@@ -95,7 +95,7 @@ class Card {
     createImage(src, classCss){
         let div = document.createElement('div');
         div.classList.add(classCss);
-        div.innerHTML = `<img src="${src}" alt="icon" height="100px" >`;
+        div.innerHTML = `<img src="${src}" alt="icon" height="100px"/>`;
 
         return div;
     }
