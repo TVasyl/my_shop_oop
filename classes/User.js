@@ -109,15 +109,15 @@ class User {
         <div class="form__item">
             <label for="email" class="form__label">E-mail:</label>
             <br>
-            <input type="text" name="email" id="email" class="form__input">
+            <input type="text" name="email" id="email" class="form__input" autocomplete="off">
         </div>
-        <h6>E-mail must look like asd@asd.asd!</h6>
+        
         <div class="form__item">
             <label for="password" class="form__label">Password:</label>
             <br>
-            <input type="password" name="password" id="password" class="form__input">
+            <input type="password" name="password" id="password" class="form__input" autocomplete="off">
         </div>
-        <h6>Password must contain 6 and more symbols!</h6>
+        
         <div class="form__register">
             <a href="#" class="register">Registration</a>
         </div>
@@ -127,3 +127,6 @@ class User {
         this._element.append(div);
     }
 }
+
+{/* <p>E-mail must look like <b>asd@asd.asd!</b></p> */}
+{/* <p>Password must contain <b>6</b> and more symbols!</p> */}

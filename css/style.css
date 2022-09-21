@@ -57,8 +57,12 @@
 }
 
 .sidebar_button:hover{
-    background-color: rgba(0, 0, 0, 0.171);
+    background-color: rgba(90, 84, 84, 0.5);
     cursor: pointer;
+}
+
+.sidebar-marc{
+    background-color: rgba(0, 0, 0, 0.171);
 }
 
 .bin-fill {
@@ -250,6 +254,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+}
+
+.form__label{
+    font-weight: 600;
 }
 
 .form__item,.form__register{
