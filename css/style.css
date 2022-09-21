@@ -269,3 +269,14 @@
 .user{
     cursor: pointer;
 }
+
+.register-form{
+    padding: 10px ;
+    border: 2px solid rgba(81, 214, 81, 0.555);
+    border-radius: 5px;
+    /* height: 300px; */
+    width: 100%;
+    
+    background-color: rgba(228, 228, 228, 0.575);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+}

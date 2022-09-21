@@ -25,7 +25,7 @@ class User {
     }
 
     setName(name) {
-        name = name.trim();
+        name = name.value.trim();
         if (name.length != 0) {
             this._name = name;
             return true;
@@ -34,7 +34,7 @@ class User {
     }
 
     setLastName(lastName) {
-        lastName = lastName.trim();
+        lastName = lastName.value.trim();
         if (lastName.length != 0) {
             this._lastName = lastName;
             return true;
@@ -47,12 +47,17 @@ class User {
 
         return true;
     }
-  
+    
+    /**
+     * Method for Login on website
+     * @returns boolen
+     */
     logIn() {
         if (localStorage.getItem(this._email)) {
             const user = JSON.parse(localStorage.getItem(this._email));
-            this.setName(user['name']);
-            this.setLastName(user['lastname']);
+            // this.setName(user['name']);
+            // this.setLastName(user['lastname']);
+            
             if (user['password'] === this._password){
                 loginButton.classList.remove('login');
                 loginButton.classList.add('cabinet');
@@ -78,13 +83,10 @@ class User {
         }
     }
 
-    createUser() {
-        if (localStorage.getItem())
-        // const user = {"email":this._email, "password":this._password }
-        localStorage.setItem(`${this._email}`, JSON.stringify(user));
-
-    }
-
+    /**
+     * Metod for render content of login page
+     * @param Boolen status 
+     */
     render(status) {
         let div = document.createElement('div');
         div.classList.add('form');
@@ -94,7 +96,7 @@ class User {
             div.classList.add('form-correct');
             div.innerHTML = 
             `<div class="form__title">
-                <h2>${this._name} welcome to website!</h2>
+                <h2>Welcome to website!</h2>
             </div>`
         }
         else {
@@ -116,7 +118,7 @@ class User {
         </div>
         <h6>Password must contain 6 and more symbols!</h6>
         <div class="form__register">
-            <a href="#">Registration</a>
+            <a href="#" class="register">Registration</a>
         </div>
         <button class="form__button submit">LOGIN</button>
         </form>`;

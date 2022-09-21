@@ -10,6 +10,7 @@ class Card {
     /**
      * Method for set name of cards
      * @param Sring - name 
+     * @returns boolen
      */
     setCardName(name) {
         this._name = name; 
@@ -20,6 +21,7 @@ class Card {
     /**
      * Method for set image of cards
      * @param String - path to image
+     * @returns boolen
      */
     setCardImage(image) {
         this._image = image;
@@ -27,13 +29,23 @@ class Card {
         return true;
     }
     
+
+    /**
+     * Method for set price of goodes
+     * @param Nomber price 
+     * @returns boolen
+     */
     setCardPrice(price) {
         this._price = price;
 
         return true;
     }
 
-    
+    /**
+     * Method for set class of CSS for cards
+     * @param String - class of style CSS
+     * @returns boolen
+     */
     setClassOfCard(classCard){
         this._classCard = classCard;
 
@@ -62,6 +74,8 @@ class Card {
      * 
      * Method for create name or title some div
      * @returns 'div' with h2 tag name and class of style from arguments
+     * @param String - what you wont to write into tag 'h2'
+     * @param String - class of style CSS
      */
     createName(name, classCss){
         let div = document.createElement('div');
@@ -75,6 +89,8 @@ class Card {
      * 
      * Metho for create image
      * @returns 'div' which contaice teg 'img' with src- parametr and style css class from arguments
+     * @param String - path to image
+     * @param String - class of style CSS
      */
     createImage(src, classCss){
         let div = document.createElement('div');
@@ -138,8 +154,5 @@ class Card {
 
             this._element.append(div);
         }
-
-
-        
     }
 }
