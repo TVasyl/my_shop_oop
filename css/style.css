@@ -16,7 +16,7 @@ html, body {
 }
 .header, .footer{
     padding: 10px 40px;
-    background-color: rgba(88, 129, 240, 0.692);
+    background-color: rgb(88, 129, 240);
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 
     display: flex;
@@ -30,21 +30,16 @@ html, body {
 
 .contant{
     display: flex;
+    width: 100%;
+    flex-direction: column;
     flex: 1 1 auto;
-
-
 }
 
-.goodes-foto{
-    /* height: 100px; */
-}
 
 .sidebar{
-    background-color: rgba(127, 255, 212, 0.664);
-    padding: 20px;
+    display: flex;
+    background-color: rgb(127, 255, 212);
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-    /* width: 200px; */
-
 }
 
 .sidebar_button{
@@ -53,12 +48,12 @@ html, body {
 }
 
 .sidebar_button:hover{
-    background-color: rgba(90, 84, 84, 0.5);
+    background-color: rgba(105, 105, 105, 0.5);
     cursor: pointer;
 }
 
 .sidebar-marc{
-    background-color: rgba(0, 0, 0, 0.171);
+    background-color: rgba(78, 78, 78, 0.281);
 }
 
 .bin-fill {
@@ -68,7 +63,6 @@ html, body {
 .main__contant {
     padding: 20px;
     overflow-y: auto;
-    width: 100%;
 
     display: flex;
     flex-wrap: wrap;
@@ -78,10 +72,10 @@ html, body {
 }
 
 .advertising{
+    margin: 10px;
     padding: 10px;
     border: 2px solid rgba(81, 214, 81, 0.555);
     border-radius: 5px;
-    /* height: 200px; */
     width: 100%;
 
     background-color: rgba(228, 228, 228, 0.575);
@@ -107,7 +101,6 @@ html, body {
 }
 
 .card:hover{
-    /* border: 2px solid rgba(247, 219, 62, 0.747); */
     transform: scale(1.02);
     transition: .3s;
 }
@@ -123,7 +116,6 @@ html, body {
     height: 30px;
     width: 100px;
     border-radius: 3px;
-    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     background-color: rgba(52, 199, 39, 0.692);
 }
 
@@ -159,10 +151,48 @@ html, body {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 }
 
+.header-fix{
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    animation-name: show_header;
+    animation-duration: 0.8s;
+}
+
+@keyframes show_header {
+    0%{
+        opacity: 0;
+        top: -50px;
+    }
+    100%{
+        opacity: 1;
+        top: 0;
+    }
+}
+
+.sidebar-fix{
+    position: fixed;
+    top: 57px;
+    width: 100%;
+    z-index: 500;
+    transition: 1s;
+    animation-name: show_nav;
+    animation-duration: 0.8s;
+}
+
+@keyframes show_nav {
+    0%{
+        opacity: 0;
+        top: -50px;
+    }
+    100%{
+        opacity: 1;
+        top: 57px;
+    }
+}
+
 @media (max-width: 500px){
-    /* html {
-        min-width: 100%;
-    } */
+
     .contant {
         display: flex;
         flex-direction: column;
@@ -171,6 +201,7 @@ html, body {
     .sidebar {
         display: flex;
         padding: 10px;
+        transition: 1s;
     }
     .bin__items {
         display: flex;
@@ -181,7 +212,10 @@ html, body {
         padding: 0;
         display: flex;
         justify-content: center;
-        /* margin: 10px; */
+    }
+    .card {
+        width: 100%;
+        margin: 20px;
     }
 }
 
@@ -294,7 +328,6 @@ html, body {
     padding: 10px ;
     border: 2px solid rgba(81, 214, 81, 0.555);
     border-radius: 5px;
-    /* height: 300px; */
     width: 100%;
     
     background-color: rgba(228, 228, 228, 0.575);

@@ -13,11 +13,24 @@ let dataOfBin = {};
 const mainContent = document.querySelector('.main__contant');
 
 // ################ Initialising buttons in side bar ################
+const header = document.querySelector('.header');
+const sidebar = document.querySelector('.sidebar');
 const homeButton = document.querySelector('.home');
 const goodesButton = document.querySelector('.goodes');
 const binButton = document.querySelector('.bin');
 const loginButton = document.querySelector('.login');
 // const register = document.querySelector('.register');
+
+
+window.onscroll = () => {
+    if (window.pageYOffset > 250) {
+        header.classList.add('header-fix');
+        sidebar.classList.add('sidebar-fix');
+    } else {
+        header.classList.remove('header-fix');
+        sidebar.classList.remove('sidebar-fix');
+    }
+}
 
 
 // ################ Click buttons in in side bar ################
