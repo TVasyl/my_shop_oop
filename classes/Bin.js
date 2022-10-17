@@ -7,7 +7,6 @@ class Bin {
         this._count;
         this._articul;
         this.classContant = "bin-contant";
-        
     }
 
     setElement(element) {
@@ -48,11 +47,9 @@ class Bin {
         let count = null;
     
         if(localStorage.getItem('cart')){
-            
             const binData = JSON.parse(localStorage.getItem('cart'));
             for(let item in binData) {
                 count += binData[item]['count'];
-                
             }
             this.setCount;
         }
@@ -61,6 +58,10 @@ class Bin {
         return count;
     }
 
+    /**
+     * 
+     * @returns Number
+     */
     createAmount(){
         let result = 0;
         if(localStorage.getItem('cart')){
@@ -73,6 +74,11 @@ class Bin {
         return result;
     }
 
+    /**
+     * Method for create items in bin with functions
+     * @param {*} articul 
+     * @returns "div" tag 
+     */
     createItems(articul) {
         let div = document.createElement('div');
         div.classList.add('bin__items');
@@ -90,7 +96,6 @@ class Bin {
         divTitle.innerHTML = `<h2>${this._title}</h2>`;
         divDescribe.append(divTitle);
         
-
         let divFunction = document.createElement('div');
         divFunction.classList.add("bin-function");
         divFunction.innerHTML = 
@@ -103,12 +108,13 @@ class Bin {
 
         div.append(divDescribe);
 
-        
-
-
         return div;
     }
 
+    /**
+     * Method for create sum all goods in the bin from class Bin
+     * @returns - "div" with button 'clear', sum and button "to order"
+     */
     createTotal() {
         let div = document.createElement('div');
         div.classList.add("bin__total");
@@ -124,8 +130,6 @@ class Bin {
 
     render(binData){
 
-        // this._element.innerHTML = '';
-        
         let div = document.createElement('div');
         div.classList.add(this.classContant);
         this.setElement(mainContent);

@@ -3,19 +3,18 @@
     padding: 0;
 }
 
+html, body {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
 .container{
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 
 }
 .header, .footer{
-    height: 70px;
     padding: 10px 40px;
     background-color: rgba(88, 129, 240, 0.692);
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
@@ -25,29 +24,26 @@
     justify-content: space-between;
 }
 
+.footer{
+    height: 30px;
+}
+
 .contant{
     display: flex;
-    position: absolute;
-    top: 90px;
-    bottom: 90px;
-    left: 0;
-    right: 0;
+    flex: 1 1 auto;
 
 
 }
 
 .goodes-foto{
-    height: 100px;
+    /* height: 100px; */
 }
 
 .sidebar{
-    /* position: relative; */
     background-color: rgba(127, 255, 212, 0.664);
     padding: 20px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-    width: 200px;
-    /* min-height: 300px; */
-    /* height: 100vh; */
+    /* width: 200px; */
 
 }
 
@@ -66,12 +62,6 @@
 }
 
 .bin-fill {
-    /* display: inline-block;
-    /* padding: 2px; */
-    /* height: 15px;
-    width: 15px;
-    border-radius: 50%;
-    background-color: red;  */
     color: rgb(248, 4, 4);
 }
 
@@ -82,17 +72,16 @@
 
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
-    /* justify-content: space-between; */
-    
-
+    transition: all 0.5s ease-in-out;
 }
 
 .advertising{
     padding: 10px;
     border: 2px solid rgba(81, 214, 81, 0.555);
     border-radius: 5px;
-    height: 200px;
+    /* height: 200px; */
     width: 100%;
 
     background-color: rgba(228, 228, 228, 0.575);
@@ -105,8 +94,8 @@
     padding: 10px 0;
     border: 2px solid rgba(81, 214, 81, 0.555);
     border-radius: 5px;
-    height: 300px;
-    width: 200px;
+    height: 400px;
+    width: 300px;
     
     background-color: rgba(228, 228, 228, 0.575);
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
@@ -118,15 +107,14 @@
 }
 
 .card:hover{
-    /* height: 305px;
-    width: 205px; */
-    border: 2px solid rgba(247, 219, 62, 0.747);
+    /* border: 2px solid rgba(247, 219, 62, 0.747); */
+    transform: scale(1.02);
+    transition: .3s;
 }
 
 .card__hr{
     width: 100%;
     color: rgba(81, 214, 81, 0.788);
-    /* box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.486); */
 }
 
 
@@ -167,9 +155,34 @@
 .bin__items{
     padding: 10px;
     display: flex;
-    /* justify-content: space-between; */
     border: 1px solid rgba(0, 0, 0, 0.377);
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 500px){
+    /* html {
+        min-width: 100%;
+    } */
+    .contant {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
+    }
+    .sidebar {
+        display: flex;
+        padding: 10px;
+    }
+    .bin__items {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main__contant {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        /* margin: 10px; */
+    }
 }
 
 .bin-describe{
@@ -197,7 +210,6 @@
 .operation__button{
     height: 30px;
     width: 30px;
-    /* border-radius: 3px; */
     background-color: rgba(52, 199, 39, 0.692);
 }
 

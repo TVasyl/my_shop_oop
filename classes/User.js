@@ -55,8 +55,6 @@ class User {
     logIn() {
         if (localStorage.getItem(this._email)) {
             const user = JSON.parse(localStorage.getItem(this._email));
-            // this.setName(user['name']);
-            // this.setLastName(user['lastname']);
             
             if (user['password'] === this._password){
                 loginButton.classList.remove('login');
